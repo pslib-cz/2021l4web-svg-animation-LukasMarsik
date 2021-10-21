@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <svg width="1920" height="700">
+          <circle id="my-circle" r="20" cx="50" cy="50" fill="#ffff"/>
+            <animate 
+                xlink:href="#my-circle"
+                attributeName="cx"
+                from="50"
+                to="450" 
+                dur="1.5s"
+                rotate="auto"
+                repeatCount="indefinite"
+                fill="freeze"
+                id="circ1-anim"/> 
+                
+        <circle id="my-circle2" r="20" cx="450" cy="50" fill="#ffff"/>
+            <animate 
+                xlink:href="#my-circle2"
+                attributeName="cx"
+                from="450"
+                to="50" 
+                dur="1.5s"
+                begin="circ1-anim.begin + 0s"
+                rotate="auto"
+                repeatCount="indefinite"
+                fill="freeze" /> 
+        <circle id="my-circle3" r="20" cx="450" cy="50" fill="#ffff"/>
+            <animate 
+                xlink:href="#my-circle3"
+                attributeName="cx"
+                from="225"
+                to="450" 
+                dur="1.5s"
+                begin="circ1-anim.begin + 0s"
+                rotate="auto"
+                repeatCount="indefinite"
+                fill="freeze" />
+        <circle id="my-circle4" r="20" cx="450" cy="50" fill="#ffff"/>
+            <animate 
+                xlink:href="#my-circle4"
+                attributeName="cx"
+                from="225"
+                to="50" 
+                dur="1.5s"
+                begin="circ1-anim.begin + 0s"
+                rotate="auto"
+                repeatCount="indefinite"
+                fill="freeze" /> 
+        <text x="200" y="130" style="font:40px Arial;" fill="#ffff">
+             Loading         
+        </text>
+        <rect id="square1" x="350" y="120" width="10" height="10" fill="#ffff"/> 
+            <animate
+                xlink:href="#square1"
+                attributeName="x"/>
+        <rect id="square2" x="370" y="120" width="10" height="10" fill="#ffff"/> 
+            <animate
+                xlink:href="#square2"
+                attributeName="x"/>
+        <rect id="square3" x="390" y="120" width="10" height="10" fill="#ffff"/> 
+            <animate
+                xlink:href="#square3"
+                attributeName="x"/>
+    </svg>
+</body>
+</html>
