@@ -8,56 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <svg width="470" height="150">
-          <circle id="my-circle" r="20" cx="50" cy="50" fill="#ffff"/>
+    <svg width="900" height="900">
+          <circle id="my-circle" r="200" cx="250" cy="250" fill="none" stroke="#ffff" stroke-width="10" stroke-mitterlimit="0" stroke-dasharray="1256" stroke-linecap="square" />
             <animate 
-                xlink:href="#my-circle"
-                attributeName="cx"
-                from="50"
-                to="450" 
-                dur="1.5s"
-                rotate="auto"
-                repeatCount="indefinite"
-                fill="freeze"
-                id="circ1-anim"/> 
-                
-        <circle id="my-circle2" r="20" cx="450" cy="50" fill="#ffff"/>
-            <animate 
-                xlink:href="#my-circle2"
-                attributeName="cx"
-                from="450"
-                to="50" 
-                dur="1.5s"
-                begin="circ1-anim.begin + 0s"
-                rotate="auto"
-                repeatCount="indefinite"
-                fill="freeze" /> 
-        <circle id="my-circle3" r="20" cx="450" cy="50" fill="#ffff"/>
-            <animate 
-                xlink:href="#my-circle3"
-                attributeName="cx"
-                from="225"
-                to="450" 
-                dur="1.5s"
-                begin="circ1-anim.begin + 0s"
-                rotate="auto"
-                repeatCount="indefinite"
-                fill="freeze" />
-        <circle id="my-circle4" r="20" cx="450" cy="50" fill="#ffff"/>
-            <animate 
-                xlink:href="#my-circle4"
-                attributeName="cx"
-                from="225"
-                to="50" 
-                dur="1.5s"
-                begin="circ1-anim.begin + 0s"
-                rotate="auto"
-                repeatCount="indefinite"
-                fill="freeze" /> 
-        <text x="150" y="130" style="font:50px Arial;" fill="#ffff">
+                attributeName="stroke-dashoffset" 
+                values="1256;0" 
+                dur="3s" 
+                repeatCount="indefinite">
+            </animate>
+        <text x="125" y="250" style="font:50px Arial;" fill="#ffff">
              Loading         
         </text>
-        <rect id="square1" x="330" y="120" width="15" height="15" fill="#ffff"/> 
+        <rect id="square1" x="320" y="235" width="15" height="15" fill="#ffff"/> 
             <animate
                 xlink:href="#square1"
                 attributeName="rx" 
@@ -66,7 +28,7 @@
                 repeatCount="indefinite"
                 begin="0"
                 id="rect-anim"/>
-        <rect id="square2" x="350" y="120" width="15" height="15" fill="#ffff"/> 
+        <rect id="square2" x="340" y="235" width="15" height="15" fill="#ffff"/> 
             <animate
                 xlink:href="#square2"
                 attributeName="rx" 
@@ -74,7 +36,7 @@
                 dur="2s" 
                 repeatCount="indefinite"
                 begin="rect-anim.begin + 0.66s"/>
-        <rect id="square3" x="370" y="120" width="15" height="15" fill="#ffff"/> 
+        <rect id="square3" x="360" y="235" width="15" height="15" fill="#ffff"/> 
             <animate
                 xlink:href="#square3"
                 attributeName="rx" 
